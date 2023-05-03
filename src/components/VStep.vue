@@ -110,9 +110,9 @@ export default {
     createStep () {
       if (this.debug) {
         console.log('[Vue Tour] The target element ' + this.step.target + ' of .v-step[id="' + this.hash + '"] is:', this.targetElement);
-        console.log('AAAAAAAAAAAAAA', this.step.parent ? document.querySelector(this.step.target).parentElement : document.querySelector(this.step.target));
-        console.log('AAAAAAAAAAAAAA', this.step.parent);
-        console.log('AAAAAAAAAAAAAA', document.querySelector(this.step.target).parentElement);
+        console.log('[Vue Tour]', this.step.parent ? document.querySelector(this.step.target).parentElement : document.querySelector(this.step.target));
+        console.log('[Vue Tour]', this.step.parent);
+        console.log('[Vue Tour]', document.querySelector(this.step.target).parentElement);
       }
 
       if (this.isSticky) {
