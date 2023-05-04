@@ -152,7 +152,7 @@ export default {
       return this.params.highlight
     },
     createHighlight () {
-      if (this.isHighlightEnabled()) {
+      if (this.isHighlightEnabled() && this.targetElement) {
         document.body.classList.add(HIGHLIGHT.classes.active)
         const transitionValue = window.getComputedStyle(this.targetElement).getPropertyValue('transition')
 
@@ -171,7 +171,7 @@ export default {
       }
     },
     removeHighlight () {
-      if (this.isHighlightEnabled()) {
+      if (this.isHighlightEnabled() && this.targetElement) {
         const target = this.targetElement
         const currentTransition = this.targetElement.style.transition
         this.targetElement.classList.remove(HIGHLIGHT.classes.targetHighlighted)
