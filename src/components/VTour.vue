@@ -206,14 +206,15 @@ export default {
       const isButtonAllowed = (name) => this.customOptions.enabledButtons.hasOwnProperty(name) ? this.customOptions.enabledButtons[name] : true
       switch (e.keyCode) {
         case KEYS.ARROW_RIGHT:
-          console.log('AAAAAAAAAAAAAbuttonPrevious', isButtonAllowed('buttonPrevious'));
-          console.log('AAAAAAAAAAAAA',  this.customOptions.enabledButtons);
+          console.log('AAAAAAAAAAAAAbuttonPreviousRight', isButtonAllowed('buttonPrevious'), );
+          console.log('AAAAAAAAAAAAA', this.steps[this.currentStep]);
           console.log('AAAAAAAAAAAAA',  this.customOptions);
           isButtonAllowed('buttonPrevious') && this.isKeyEnabled('arrowRight') && this.nextStep()
           break
         case KEYS.ARROW_LEFT:
-        console.log('AAAAAAAAAAAAAbuttonNext', isButtonAllowed('buttonNext'));
-        console.log('AAAAAAAAAAAAA',  this.customOptions.enabledButtons);
+        console.log('AAAAAAAAAAAAAbuttonNextLeft', isButtonAllowed('buttonNext'));
+        console.log('AAAAAAAAAAAAA', this.steps[this.currentStep]);
+
           console.log('AAAAAAAAAAAAA',  this.customOptions);
           isButtonAllowed('buttonNext') && this.isKeyEnabled('arrowLeft') && this.previousStep()
           break
