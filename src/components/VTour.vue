@@ -203,7 +203,7 @@ export default {
 
     handleKeyup (e) {
       if (this.customOptions.debug) console.log('[Vue Tour] A keyup event occured:', e)
-      const isButtonAllowed = (name) => this.steps[this.currentStep].enabledButtons.hasOwnProperty(name) ? this.steps[this.currentStep].enabledButtons[name] : true
+      const isButtonAllowed = (name) => this.steps[this.currentStep]?.enabledButtons?.hasOwnProperty(name) ? this.steps[this.currentStep].enabledButtons[name] : true
       switch (e.keyCode) {
         case KEYS.ARROW_RIGHT:
           console.log('AAAAAAAAAAAAAbuttonPreviousRight', isButtonAllowed('buttonPrevious'), );
